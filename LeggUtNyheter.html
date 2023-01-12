@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>ZenBlog Bootstrap Template - Single Post</title>
+  <title>ZenBlog Bootstrap Template - Contact</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,58 +45,24 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>ZenBlog</h1>
+        <img src="assets/img/logo.png" alt="">
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="single-post.html">Single Post</a></li>
-          <li class="dropdown"><a href="category.html"><span>Categories</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="search-result.html">Search Result</a></li>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                    class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index">Nyheter</a></li>
+          <li><a href="Album">Album</a></li>
+          <li><a href="OmOss">Om Oss</a></li>
+          <li><a href="KontaktOss">Kontakt Oss</a></li>
         </ul>
       </nav><!-- .navbar -->
 
       <div class="position-relative">
-        <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-        <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-        <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
-
-        <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
+        <a href="https://www.facebook.com/Raknehaugspillet" class="mx-2"><span class="bi-facebook"></span></a>
+        <a href="https://www.instagram.com/raknehaugspillet/" class="mx-2"><span class="bi-instagram"></span></a>
         <i class="bi bi-list mobile-nav-toggle"></i>
-
-        <!-- ======= Search Form ======= -->
-        <div class="search-form-wrap js-search-form-wrap">
-          <form action="search-result.html" class="search-form">
-            <span class="icon bi-search"></span>
-            <input type="text" placeholder="Search" class="form-control">
-            <button class="btn js-search-close"><span class="bi-x"></span></button>
-          </form>
-        </div><!-- End Search Form -->
 
       </div>
 
@@ -105,28 +71,104 @@
   </header><!-- End Header -->
 
   <main id="main">
+    <section id="contact" class="contact mb-5">
+      <div class="container" data-aos="fade-up">
 
-    <section class="single-post-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9 post-content" data-aos="fade-up">
-
-            <!-- ======= Single Post Content ======= -->
-            <div class="single-post">
-              <div class="post-meta"><span class="date">FORFATTER!</span> <span class="mx-1">&bullet;</span>
-                <span>DATO!</span></div>
-              <h1 class="mb-5">TITTEL!</h1>
-              <p>UNDERTITTEL!</p>
-
-              <figure class="my-4">
-                <img src="assets/img/post-landscape-1.jpg" alt="" class="img-fluid">
-                <!-- <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption> -->
-              </figure>
-              <p>DESC!</p>
-            </div><!-- End Single Post Content -->
+        <!-- make a row with three columns displaying 3 equally big images -->
+        <div class="row my-5 text-center">
+          <h2>Plasseringer:</h2>
+          <div class="col-lg-4 col-md-6">
+            <div class="m-1 border">
+              <img src="assets/img/slideshow.jpg" alt="" class="img-fluid">
+            </div>
+            <p>Slideshow</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="m-1 border">
+              <img src="assets/img/vanlige innlegg.jpg" alt="" class="img-fluid">
+            </div>
+            <p>Vanlige innlegg</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="m-1 border">
+              <img src="assets/img/aktuelt.jpg" alt="" class="img-fluid">
+            </div>
+            <p>Aktuelt</p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="page-title">Legg ut innlegg</h1>
+          </div>
+        </div>
+
+        <div class="form mt-5">
+          <form action="blog/php/publish.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="date" class="form-control" id="date" placeholder="Dato / 1. januar 2023"
+                  required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="file" class="form-control" name="image" id="image" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="title" id="title" placeholder="Tittel" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="undertitle" id="undertitle" placeholder="Undertittel"
+                required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="desc" rows="5" placeholder="Beskrivelse" required></textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="author" id="author" placeholder="Forfatter" required>
+            </div>
+            <select name="category" id="category" class="form-control">
+              <option value="posts">Legg under vanlig innlegg</option>
+              <option value="aktuelt">Legg under aktuelt tabellen</option>
+              <option value="slideshow">Legg under slideshow øverst på siden</option>
+            </select>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Legg ut</button></div>
+          </form>
+        </div><!-- End Contact Form -->
+
+        <div class="row">
+          <div class="col-lg-12 text-center mt-5">
+            <h1 class="page-title">Slett innlegg</h1>
+          </div>
+        </div>
+
+        <div class="form mt-5">
+          <form action="blog/php/delete.php" method="post" role="form" class="php-email-form">
+            <div class="form-group">
+              <input type="text" class="form-control" name="title" id="title" placeholder="Tittel">
+            </div>
+            <select name="category" id="category" class="form-control">
+              <option value="posts">Slett under vanlig innlegg</option>
+              <option value="aktuelt">Slett under aktuelt tabellen</option>
+              <option value="slideshow">Slett under slideshow øverst på siden</option>
+            </select>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Slett</button></div>
+          </form>
+        </div><!-- End Contact Form -->
+
+      </div>
     </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
